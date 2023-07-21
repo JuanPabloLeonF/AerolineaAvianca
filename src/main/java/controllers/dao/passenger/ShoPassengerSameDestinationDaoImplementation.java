@@ -22,6 +22,7 @@ public class ShoPassengerSameDestinationDaoImplementation implements IShoPasseng
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         List<Passenger> passengerList = new ArrayList<Passenger>();
+        Passenger foundPassenger = null;
 
         try {
 
@@ -39,8 +40,8 @@ public class ShoPassengerSameDestinationDaoImplementation implements IShoPasseng
                 String city = resultSet.getString("city");
                 Location destination = new Location(idDestination, country, city);
 
-                passenger = new Passenger(idPassenger, name, identification, destination);
-                passengerList.add(passenger);
+                foundPassenger = new Passenger(idPassenger, name, identification, destination);
+                passengerList.add(foundPassenger);
             }
 
         } catch (SQLException ex) {

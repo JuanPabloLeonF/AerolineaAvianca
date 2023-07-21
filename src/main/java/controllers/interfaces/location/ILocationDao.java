@@ -1,4 +1,4 @@
-package controllers.interfaces;
+package controllers.interfaces.location;
 
 import java.util.List;
 import models.Location;

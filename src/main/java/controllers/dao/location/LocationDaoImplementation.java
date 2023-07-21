@@ -1,7 +1,7 @@
-package controllers.dao;
+package controllers.dao.location;
 
 import controllers.configuration.ConnectionConexion;
-import controllers.interfaces.ILocationDao;
+import controllers.interfaces.location.ILocationDao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.HashMap;

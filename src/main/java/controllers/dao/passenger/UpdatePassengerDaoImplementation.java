@@ -9,7 +9,7 @@ import models.Passenger;
 
 public class UpdatePassengerDaoImplementation implements IUpdatePassengerDao{
     
-    private static final String SQL_UPDATE_PASSENGER = "UPDATE passenger SET = name = ?, identification = ?, idDestination = ? WHERE idPassenger = ?";
+    private static final String SQL_UPDATE_PASSENGER = "UPDATE passenger SET name = ?, identification = ? WHERE idPassenger = ?";
 
     @Override
     public int updatePassenger(Passenger passenger) {
@@ -24,8 +24,7 @@ public class UpdatePassengerDaoImplementation implements IUpdatePassengerDao{
             preparedStatement = connection.prepareStatement(SQL_UPDATE_PASSENGER);
             preparedStatement.setString(1, passenger.getName());
             preparedStatement.setString(2, passenger.getIdentification());
-            preparedStatement.setInt(3, passenger.getIdDestination().getIdLocation());
-            preparedStatement.setInt(4, passenger.getIdPassenger());
+            preparedStatement.setInt(3, passenger.getIdPassenger());
 
             rows = preparedStatement.executeUpdate();
 
