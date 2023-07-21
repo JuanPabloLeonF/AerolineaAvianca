@@ -1,14 +1,5 @@
 package controllers.dao.location;
 
-import controllers.configuration.ConnectionConexion;
-import controllers.interfaces.location.ILocationDao;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.HashMap;
-import java.util.List;
-import models.Location;
-import models.Passenger;
-
 public class LocationDaoImplementation {
     
     private static final String SQL_CREATE_LOCATION = "INSERT INTO location(country, city) values(?, ?)";

@@ -28,16 +28,13 @@ public class SearchForIdentityDaoImplementation implements ISearchForIdentityDao
             if(resultSet.next()) {
                 int idPassenger = resultSet.getInt("idPassenger");
                 String name = resultSet.getString("name");
-                String identification = resultSet.getString("identification");
                 int idDestination = resultSet.getInt("idLocation");
                 String country = resultSet.getString("country");
                 String city = resultSet.getString("city");
                 Location destination = new Location(idDestination, country, city);
-                
-                passenger = new Passenger();
+
                 passenger.setIdPassenger(idPassenger);
                 passenger.setName(name);
-                passenger.setIdentification(identification);
                 passenger.setIdDestination(destination);
                 
             } else {

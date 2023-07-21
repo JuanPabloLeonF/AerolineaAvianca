@@ -11,10 +11,9 @@ import java.util.List;
 import models.Location;
 import models.Passenger;
 
-public class ShoPassengerSameDestinationDaoImplementation implements IShoPassengerSameDestinationDao {
+public class ShowPassengerSameDestinationDaoImplementation implements IShoPassengerSameDestinationDao {
 
     private static final String SQL_SHOW_PASSENGER_WITH_SAME_DESTINATION = "SELECT p.idPassenger, p.name, p.identification, l.idLocation, l.country, l.city  FROM passenger p JOIN location l  ON  p.idDestination = l.idLocation where p.idDestination = ?";
-
     @Override
     public List<Passenger> showPassengersWithSameDestination(Passenger passenger) {
         
