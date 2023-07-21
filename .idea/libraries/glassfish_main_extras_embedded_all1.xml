@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="glassfish.main.extras.embedded.all1" type="repository">
+    <properties maven-id="org.glassfish.main.extras:glassfish-embedded-all:5.1.0-RC2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/main/extras/glassfish-embedded-all/5.1.0-RC2/glassfish-embedded-all-5.1.0-RC2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/main/jms/jmsra/5.1.0-RC2/jmsra-5.1.0-RC2.zip!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/mq/mq-distribution/5.1.3/mq-distribution-5.1.3.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
