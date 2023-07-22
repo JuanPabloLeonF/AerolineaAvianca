@@ -1,13 +1,4 @@
-package controllers.dao;
-
-import controllers.configuration.ConnectionConexion;
-import controllers.interfaces.ILocationDao;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.HashMap;
-import java.util.List;
-import models.Location;
-import models.Passenger;
+package controllers.dao.location;
 
 public class LocationDaoImplementation {
     
