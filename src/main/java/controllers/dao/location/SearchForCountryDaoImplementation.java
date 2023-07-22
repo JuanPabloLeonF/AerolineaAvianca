@@ -3,15 +3,13 @@ package controllers.dao.location;
 import controllers.configuration.ConnectionConexion;
 import controllers.interfaces.location.ISearchForCountryDao;
 import models.Location;
-import models.Passenger;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class SearchForCountryDaoImplementation implements ISearchForCountryDao {
-    private static final String SQL_SEARCH_FOR_IDENTITY = "SELECT * FROM location WHERE country = ?";
+    private static final String SQL_SEARCH_FOR_COUNTRY = "SELECT * FROM location WHERE country = ?";
 
     @Override
     public Location searchForCountry(Location location) {
@@ -22,7 +20,7 @@ public class SearchForCountryDaoImplementation implements ISearchForCountryDao {
         try {
 
             connection = ConnectionConexion.getConnection();
-            preparedStatement = connection.prepareStatement(SQL_SEARCH_FOR_IDENTITY);
+            preparedStatement = connection.prepareStatement(SQL_SEARCH_FOR_COUNTRY);
             preparedStatement.setString(1, location.getCountry());
             resultSet = preparedStatement.executeQuery();
 

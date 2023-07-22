@@ -19,7 +19,6 @@ public class EliminatedLocationDaoImplementation implements IEliminatedLocationD
         int rows = 0;
 
         try {
-
             connection = ConnectionConexion.getConnection();
             preparedStatement = connection.prepareStatement(SQL_ELIMINATED_LOCATION);
             preparedStatement.setInt(1, idLocation.getIdLocation());
